@@ -1,0 +1,92 @@
+<body class="body-colored">
+       
+  <div class="productgrid gradient_background">
+      
+      {% if cart.item_count > 0 %}
+  <form action="/cart" method="post" novalidate>
+    <div class="customcontainer-2">
+      <div class="section_title_wrapper">
+        <h1 class="heading-3">Your Shopping Cart</h1>
+      </div>
+      <div class="cart_header">
+        <div class="cart_product_column">
+          <p class="cart_header_text">Product</p>
+        </div>
+        <div class="cart_quantity_column">
+          <p class="cart_header_text">Quantity</p>
+        </div>
+        <div class="cart_total_column">
+          <p class="cart_header_text">Total</p>
+        </div>
+      </div>
+        
+        {% for item in cart.items %}
+      <div class="product_grid">
+          
+        <div id="w-node-4a11896a93be-395d45bf" class="product_row_product_column">
+          <img src="{{ item | img_url: 'medium' }}" alt="" class="cart_product_image">
+            <a href="{{ item.url | within: collections.all }}" style="text-decoration: none;">
+          <div class="product_info_block">
+            <p class="productrow_product_info">{{ item.product.title }}
+			<span class='booster-cart-item-success-notes' data-key='{{item.key}}'></span><span class='booster-cart-item-upsell-notes' data-key='{{item.key}}'></span></p>
+            <p class="cart_shipping_label">{{ item.price | money }}</p>
+          </div>
+            </a>
+        </div>
+        
+        
+        <div id="w-node-4a11896a93c5-395d45bf" class="cart_quantity_column">
+          <div class="quantity_block-2 w-form">
+
+
+            <div id="email-form" name="email-form" data-name="Email Form" class="form-5">
+              <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0" class="text-field-5 w-input">
+          </div>
+            </div>
+        </div>
+        
+        
+        <div id="w-node-4a11896a93cf-395d45bf" class="cart_total_column">
+          <p class="cart_shipping_price"><span class='booster-cart-item-line-price' data-key='{{item.key}}'>{{ item.line_price | money }}</span></p>
+        </div>
+          
+      </div>
+        
+        {% endfor %}
+      <div class="total_wrapper">
+        <p id="w-node-4a11896a93d3-395d45bf" class="cart_shipping_label"Shipping Costs </p>
+        <p id="w-node-4a11896a93d5-395d45bf" class="cart_total_label">Total</p>
+        <p id="w-node-4a11896a93d7-395d45bf" class="cart_shipping_price">Free Shipping (deal valid until Friday)</p>
+        <p id="w-node-4a11896a93d9-395d45bf" class="cart_total_price">
+          <span class="wh-original-cart-total">
+          <span class='wh-original-price'>{{ cart.total_price | money }}</span>
+          </span>
+          <span class="wh-cart-total"></span>
+        <div class="additional-notes">
+          <span class="wh-minimums-note"></span><span class="wh-extra-note"></span>
+        </div>
+
+          <button type="submit" name="update" id="w-node-4a11896a93db-395d45bf" class="secondarybuttondark w-button">Adjust</button>
+          <button type="submit" name="checkout" id="w-node-4a11896a93dd-395d45bf" href="#" class="checkoutbutton-2 w-button">Continue checking out</button>
+    </div>
+    </div>
+
+      </form>
+{% else %}
+  <div class="customcontainer-2">
+      <div class="section_title_wrapper">
+        <h1 class="heading-3">Your Shopping Cart</h1>
+          <p class="paragraph center-align">Your shopping cart is empty!</p>
+      </div>
+    </div>
+{% endif %}
+
+      
+  </div>
+
+
+
+  {% include 'footer' %}
+
+
+</body>

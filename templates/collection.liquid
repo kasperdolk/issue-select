@@ -1,0 +1,43 @@
+
+
+<div class="product-section-grid-copy">
+    <div class="customcontainer">
+      <div class="product-wrapper">
+        <div class="section-title">Products</div>
+        <h1 class="heading-3">{{ collection.title }}</h1>
+        <p class="paragraph center-align">Find the newest TikTok products at Trendt</p>
+        <div class="w-layout-grid product-grid">
+            
+              {% for product in collection.products %}
+          
+
+    
+        <div class="single-product">
+            <a href="{{ product.url | within: collection }}" style="text-decoration: none;">
+            <img src="{{ product.featured_image.src | img_url: 'large' }}" loading="lazy" alt="" class="image-2">
+            <p class="product-name" style="margin-bottom:8px;">{{ product.title }}</p>
+                            {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: false, product: product %}
+            <p class="review-text" style="margin:8px 0px;">{{ product.price | money }} <span style="color:#929bc1;opacity:0.6;text-decoration: line-through;">{{ product.compare_at_price_max | money }}</span></p>
+            <p class="paragraph">{{ product.metafields.global.productomschrijvingkort }}</p>
+            <a href="{{ product.url | within: collection }}" class="shop-product-button w-button">Shop Product</a>
+                
+                </a></div>
+    
+
+      
+    
+  {% else %}
+    <p class="paragraph center-align">No search results found</p>
+  {% endfor %}
+          
+            
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% include 'usps' %}
+
+{% include 'footer' %}
+

@@ -1,0 +1,28 @@
+// Put your styles in this file.
+// Shopify will compile SCSS/SASS on each deploy.
+// Note: "@import" rules aren’t supported.
+
+
+
+@font-face {
+  font-family: 'Trends';
+  src: url('Trends-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Trends';
+  src: url('Trends-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Trends';
+  src: url('Trends-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+

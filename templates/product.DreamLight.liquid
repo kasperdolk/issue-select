@@ -1,0 +1,147 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+{% assign productomschrijving_kort = "LED strips | RGB lights 🎆" %}
+{% assign stocknumber = 20 %}
+
+
+
+
+<div class="section-4" id="product-page-section">
+    <div class="customcontainer-2">
+      <div class="columnsproduct w-row">
+        <div class="imgcolumn w-col w-col-6 w-col-stack">
+          <div class="imagewrapper">
+            {% include 'image-slider' %}
+          </div>
+        </div>
+        <div class="column-2 w-col w-col-6 w-col-stack">
+          {% include 'product-info' %}
+              
+          <div class="w-layout-grid usps_grid">
+            <div id="w-node-1510455e3a38-5c1a5c2a" class="single_usp"><img src="{{'icon-gratis-verzonden-usp.svg' | asset_url}}" alt="" class="usp_image">
+              <p class="website_usp">Free shipping</p>
+            </div>
+            <div class="single_usp"><img src="{{'icon-tevredenheidsgarantie-usp.svg' | asset_url}}" alt="" class="usp_image">
+              <p class="website_usp">Satisfaction guarantee</p>
+            </div>
+            <div class="single_usp"><img src="{{'icon-veilig-betalen-usp.svg' | asset_url}}" alt="" class="usp_image">
+              <p class="website_usp">Secure payments</p>
+            </div>
+          </div>
+          
+          <div class="productpagesubtitle">WHAT IS THE DREAMLIGHT?</div>
+         
+          <p item="description" class="paragraph-2">{{ product.description }}</p>
+          
+          <img src="{{' ezgif.com-gif-maker_13.gif ' | asset_url}}" alt="" class="image_product_description">
+          
+          <div class="productpagesubtitle">WHY THE DREAMLIGHT?:</div>
+          
+
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2"><b>Endless</b>amount of combinations by mixing the 16 different colours</p>
+          </div>
+          
+         
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2"><b>Transforms</b> the entire look of your room.</p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Install the strip under your<b>bed</b>, across your <b>desk</b>, behind the <b>make-up mirror</b> or through<b>the entire room</b></p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">With the included remote you will be able to adjust the colours and brightness <b>super easy</b> </p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Insert  <b>self created</b>combinations</p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Create the perfect setting for a night <b> Netflix & Chill</b></p>
+          </div>
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">The perfect <b>Christmas gift</b> </p>
+          </div>
+         
+          
+           <img src="{{' ezgif.com-gif-maker_14.gif ' | asset_url}}" alt="" class="image_product_description">
+          
+          <div class="productpagesubtitle">WHAT YOU’LL GET</div>
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">The Dreamlight Led Strip</p>
+          </div>
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Free remote </p>
+          </div>
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">EU adapter (the plug🔌) </p>
+          </div>
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Coolest room there is</p>
+            
+            </div> 
+         
+{% include 'mededeling' %}
+          
+          
+          <div class="productpagesubtitle">100% SATISFACTION GUARANTEE</div>
+          <p class="paragraph-2">Dissatisfied for whatever reason? Return your purchase within the first 14 days to address our policy.</p>
+  
+            <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">
+              <div class="question-title">What are the dimensions of the Dreamlight?</div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">Sizes available are 2 meter, 5 meter and 10 meter</p>
+            </div>
+          </div>
+  
+            <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">          
+              <div class="question-title">Do I need batteries</div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">No! seems a bit old fashioned doesn’t it.😉</p>
+            </div>
+          </div>
+  
+            <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">
+              <div class="question-title">Is the dreamlight safe?</div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">Yes! All our products are 100% safety guaranteed. They have both a RoHS and CE approval to prove it😉. Would you like more information? Read the positive reviews of our customers.</p>
+            </div>
+          </div>
+         
+  
+             <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">
+              <div class="question-title">How can I use the checkout?</div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">Payments with Apple pay, Google pay, Paypal, and Credit Card are possible.</p>
+            </div>
+          </div>          
+          
+ 
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Add recommendation widget -->
+<div id="ur-custom-widget"></div>
+<!-- End recommendation widget -->
+
+{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
+
+{% include 'usps' %}
+{% include 'footer' %}
+{% include 'sticky-buy' %}
+
+

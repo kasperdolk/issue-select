@@ -1,0 +1,23 @@
+
+
+<div class="product-option-row">
+      <label for="select-{{ option_name }}" class="form-label">
+        {{ option.name }}
+      </label>
+
+    
+    <div class="option-values">
+      <img src="{{'arrow.svg' | asset_url }}" class="option-select-arrow">
+      <select name="{{ option_name }}" id="select-{{ option_name }}" class="text-field-4" style="appearance: none;-moz-appearance: none;-webkit-appearance: none;width:100%;">
+        
+        
+        {%- for value in option.values -%}
+        <option value="{{ value }}">{{ value }}</option>
+        
+        {%- endfor -%}
+      </select>
+
+        
+    </div>
+    </div>
+  

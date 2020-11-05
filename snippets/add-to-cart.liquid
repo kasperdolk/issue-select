@@ -1,0 +1,69 @@
+{% assign has_multiple_variants = false %}
+{% if product.variants.size > 1 %}
+{% assign has_multiple_variants = true %}
+{% endif %}
+
+{% assign has_multiple_options = false %}
+{% if product.options.size > 1 %}
+{% assign has_multiple_options = true %}
+{% endif %}
+
+
+{% if has_multiple_variants %}
+{% include 'get-variants-with-quantity-json' with product: product %}
+{% endif %}
+
+
+{% assign can_add_to_cart = false %}
+{% if has_multiple_variants == false and product.available %}
+{% assign can_add_to_cart = true %}
+{% endif %}
+
+<form method="post" action="/cart/add" data-variants="{{ variants_with_quantity_json | url_param_escape }}" id="add-to-cart-form">
+  
+        
+  
+  <input class="js-variant-id" type="hidden" name="id" value="{{ product.variants.first.id}}">
+  
+
+
+    {% if has_multiple_variants or has_multiple_options %}
+    <div class="wrapper-variants">
+        {% for option in product.options_with_values %}
+        {% assign option_name = 'option' | append: option.position %}
+
+        {% include 'product-select-field' with option: option, option_name: option_name %}
+
+        {% endfor %}
+    </div>
+  
+  <script>
+      
+
+  </script>
+  
+
+    {% endif %}
+
+ 
+
+    <div class="add_to_cart_form">
+        <div style="display:flex;flex-direction:column;" id="wrapper-amount">
+            <div class="form-label">Deal of the day ({{ "now" | date: "%A %d %b" }})</div>
+
+            <select class="text-field-4 w-input" style="appearance: none;-moz-appearance: none;-webkit-appearance: none;min-width:250px;">
+                <option>{{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | money_without_currency | replace: '0.', ''| append: "% discount"}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="add_to_cart_form">
+
+
+        <div style="display:flex;flex-direction:column;" id="wrapper-amount">
+            <div class="reviewtextamount" id="product-description-paragraph" style="margin-left:0px;color:gray;font-size:14px;margin-bottom:4px;">Quantity</div>
+            <input type="number" class="text-field-4 w-input" maxlength="256" name="quantity" min="1" value="1" data-name="quantity" placeholder="1" item="quantity" id="field-4" required="">
+        </div>
+        <button type="submit" name="add" id="AddToCartButton" class="checkoutbutton w-button ml-16-desktop" data-w-id="14ce0c0d-efc5-034c-2c64-1510455e3a35">Add to cart +</button>
+    </div>
+</form>

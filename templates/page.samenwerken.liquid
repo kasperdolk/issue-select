@@ -1,0 +1,83 @@
+<body class="body-colored">
+
+  <div class="about-page-section">
+    <div class="customcontainer">
+      <div class="columns-2 w-row">
+        <div class="about-page-image-column w-col w-col-6 w-col-stack"><img src="{{'samenwerken.jpg' | asset_url}}" loading="lazy" alt="" class="about-image"></div>
+        <div class="about-page-text-column w-col w-col-6 w-col-stack">
+          <h1 class="about-us-heading">{{ page.title }}</h1>
+          <p class="paragraph-white">{{ page.content }}</p>
+        </div>
+      </div>
+    </div>
+  </div><img src="{{'wave-blauw.png' | asset_url}}" loading="lazy" sizes="100vw" alt="" class="wave-over-ons-pagina">
+  <div class="influencer-form-section">
+    <div class="formcontainer">
+      <h1 class="influencer-form-heading">Application form</h1>
+      <p class="paragraph align-center">Fill out the form completely</p>
+      <div class="form-block-3 w-form">
+        
+        
+
+        
+        
+        
+        {% form 'contact' %}
+
+        
+        
+{% comment %}
+          Successful message
+{% endcomment %}
+{% if form.posted_successfully? %}
+          <p class="paragraph align-center">
+Thank you for your message, we will contact you as soon as possible!.
+          </p>
+{% endif %}
+{{ form.errors | default_errors }}
+      
+        
+        <form id="influencer-form" name="influencer-form" class="form-2">
+          
+          
+          <div class="single-field-wrapper">
+            <label for="ContactFormName" class="label">😄 Full name </label>
+            <input type="text" class="text-field-3 w-input" maxlength="256" name="contact[Naam]" placeholder="Type here" autocapitalize="words" id="ContactFormName"/>
+          </div>
+                    <div class="single-field-wrapper">
+            <label for="ContactFormEmail" class="label">📧 E-mailadress</label>
+            <input type="email" class="text-field-3 w-input" maxlength="256" name="contact[email]" placeholder="Type here" autocapitalize="words" id="ContactFormEmail"/>
+          </div>
+          
+                              <div class="single-field-wrapper">
+            <label for="ContactFormTel" class="label">📞 Phine number</label>
+            <input type="text" class="text-field-3 w-input" maxlength="256" name="contact[Tel]" placeholder="Type here" autocapitalize="words" id="ContactFormTel"/>
+          </div>	
+          
+                                        <div class="single-field-wrapper">
+            <label for="ContactFormTikTok" class="label">🕺 TikTok username (e.g. @addisonre)</label>
+            <input type="text" class="text-field-3 w-input" maxlength="256" name="contact[TikTok]" placeholder="Type here" autocapitalize="words" id="ContactFormTikTok"/>
+          </div>
+          
+                                                  <div class="single-field-wrapper">
+            <label for="ContactFormInstagram" class="label">🤳 Instagram username (e.g. @addisonraee)</label>
+            <input type="text" class="text-field-3 w-input" maxlength="256" name="contact[Instagram]" placeholder="Type here" autocapitalize="words" id="ContactFormInstagram"/>
+          </div>	
+
+          <div class="single-field-wrapper">
+            <label for="ContactFormMessage" class="label">💬 Message</label>
+            <textarea placeholder="Type here..." maxlength="5000" id="ContactFormMessage" class="textarea w-input" name="contact[body]" placeholder="Type je bericht hier" {% if form.body %}{{ form.body }}{% endif %}></textarea>
+          </div>
+          
+          <input type="submit" value="Send" class="contact-form-button-red w-button">
+        </form>
+      
+              {% endform %}
+      
+      
+      </div>
+    </div>
+  </div>
+{% include 'usps' %}
+  {% include 'footer' %}
+</body>

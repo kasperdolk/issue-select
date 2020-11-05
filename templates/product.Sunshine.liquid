@@ -1,0 +1,131 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+{% assign stocknumber = 20 %}
+{% assign productomschrijving_kort = "Who is your Sunshine?☀️" %}
+
+
+
+
+<div class="section-4" id="product-page-section">
+    <div class="customcontainer-2">
+      <div class="columnsproduct w-row">
+        <div class="imgcolumn w-col w-col-6 w-col-stack">
+          <div class="imagewrapper">
+            {% include 'image-slider' %}
+          </div>
+        </div>
+        <div class="column-2 w-col w-col-6 w-col-stack">
+                                  {% include 'product-info' %}
+              
+          <div class="w-layout-grid usps_grid">
+            <div id="w-node-1510455e3a38-5c1a5c2a" class="single_usp"><img src="{{'icon-gratis-verzonden-usp.svg' | asset_url}}" alt="" class="usp_image">
+              <p class="website_usp">Gratis verzending</p>
+            </div>
+            <div class="single_usp"><img src="{{'icon-tevredenheidsgarantie-usp.svg' | asset_url}}" alt="" class="usp_image">
+              <p class="website_usp">Tevredenheidsgarantie</p>
+            </div>
+            <div class="single_usp"><img src="{{'icon-veilig-betalen-usp.svg' | asset_url}}" alt="" class="usp_image">
+              <p class="website_usp">Veilig betalen</p>
+            </div>
+          </div>
+          
+          <div class="productpagesubtitle">WAT IS DE SUNSHINE KETTING?</div>
+         
+          <p item="description" class="paragraph-2">{{ product.description }}</p>
+          
+          <img src="{{' sunshine_giffff.gif ' | asset_url}}" alt="" class="image_product_description">
+          
+          <div class="productpagesubtitle">WAAROM DE SUNSHINE KETTING?:</div>
+          
+
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Het <b>allerliefste</b> cadeau voor je vriend(in)</p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Gemaakt van <b>hoog kwaiteits</b> koper</p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Beschikbaar in zowel <b>goud als zilver</b></p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Wordt geleverd in een <b>prachtig doosje</b>, meteen klaar om cadeau te geven</p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Gemaakt met <b>extra veel</b> liefde om over te geven</p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Het pefecte <b>kerst cadeau</b> </p>
+          </div>
+         
+          
+           <img src="{{' tweede_sunshine_giffff.gif ' | asset_url}}" alt="" class="image_product_description">
+          
+          <div class="productpagesubtitle">WAT JE KRIJGT:</div>
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">De Sunshine Sunflower Ketting</p>
+          </div>
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Custom verpakking, klaar om als cadeau te geven</p>
+          </div>
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Super veel liefde van de gelukkige die de ketting mag ontvangen </p>
+          </div>
+
+         
+{% include 'mededeling' %}
+          
+          
+          <div class="productpagesubtitle">100% TEVREDENHEIDSGARANTIE</div>
+          <p class="paragraph-2">Niet tevreden om wat voor reden dan ook? Stuur je aankoop gemakkelijk binnen 14 dagen terug! </p>
+  
+            <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">
+              <div class="question-title">Wat zijn de afmetingen van de ketting?</div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">De afmeting zijn 52 cm + 5 cm. </p>
+            </div>
+          </div>
+  
+            <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">          
+              <div class="question-title">Waar is de Sunshine ketting van gemaakt?</div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">De ketting is gemaakt van hoog kwaliteits koper gemaakt.</p>
+            </div>
+          </div>
+ 
+  
+             <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">
+              <div class="question-title">Hoe kan ik betalen?</div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">Je kan bij ons veilig en snel via Ideal betalen (elke Nederlandse bank). Verder kan je betalen met Apple pay, Google pay, Bancontant, Belfius, KBC/CBC en Credit Card</p>
+            </div>
+          </div>          
+          
+ 
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Add recommendation widget -->
+<div id="ur-custom-widget"></div>
+<!-- End recommendation widget -->
+
+{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
+
+{% include 'usps' %}
+{% include 'footer' %}
+{% include 'sticky-buy' %}
+

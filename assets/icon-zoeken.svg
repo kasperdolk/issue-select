@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-zoeken</title>
+    <g id="icon-zoeken" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Search" fill="#4A5568">
+            <path d="M6,2 C3.79086,2 2,3.79086 2,6 C2,8.2091 3.79086,10 6,10 C8.2091,10 10,8.2091 10,6 C10,3.79086 8.2091,2 6,2 Z M0,6 C0,2.68629 2.68629,0 6,0 C9.3137,0 12,2.68629 12,6 C12,7.29583 11.5892,8.4957 10.8907,9.4765 L15.7071,14.2929 C16.0976,14.6834 16.0976,15.3166 15.7071,15.7071 C15.3166,16.0976 14.6834,16.0976 14.2929,15.7071 L9.4765,10.8907 C8.4957,11.5892 7.29583,12 6,12 C2.68629,12 0,9.3137 0,6 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

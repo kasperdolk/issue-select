@@ -1,0 +1,209 @@
+<div data-w-id="e0bc2f96-dd7f-2c7c-322e-47c5751ad5fc" style="display:flex" class="pre-loader">
+  <img src="{{'logo-trendt.png' | asset_url}}" loading="lazy" height="56" data-w-id="e0bc2f96-dd7f-2c7c-322e-47c5751ad5fd" sizes="100vw" alt="" class="logo-preloader">
+</div>
+
+
+<div class="header-section">
+    <div class="customcontainer">
+      <div class="header-wrapper">
+        <h1 class="heading">At Trendt you’ll find the products you see on your <strong>For You Page</strong>!</h1>
+        <div class="header-button-wrapper"><a href="/pages/over-ons" class="button secondary w-button">About us</a><a href="/collections/ons-assortiment" class="button w-button">Products</a></div>
+      </div>
+    </div><img src="{{'Redcloud.png' | asset_url }}" loading="lazy" data-w-id="698d3d43-6182-d5a1-a3d1-e1c633d150ad" alt="" class="cloud1"><img src="{{'Bluecloud.png' | asset_url }}" loading="lazy" data-w-id="c5082894-3d57-473a-2d5f-32f6c14cf6fd" alt="" class="cloud2"></div>
+    
+    <img src="{{'wave.png' | asset_url }}" loading="lazy" width="1384" sizes="100vw" alt="" class="image-54">
+
+
+  <div class="usps-section">
+    <div class="columns customcontainer w-row">
+      <div class="feature-column w-col w-col-4 w-col-stack">
+        <div class="single-usp"><img src="{{'Hashtag.svg' | asset_url}}" loading="lazy" alt="" class="usp-icon">
+          <h1 class="usp-heading">The newest TikTok trends</h1>
+        </div>
+      </div>
+      <div class="feature-column w-col w-col-4 w-col-stack">
+        <div class="single-usp"><img src="{{'Shield-Check.svg' | asset_url}}" loading="lazy" alt="" class="usp-icon">
+          <h1 class="usp-heading">Best value for money </h1>
+        </div>
+      </div>
+      <div class="feature-column w-col w-col-4 w-col-stack">
+        <div class="single-usp"><img src="{{'Tag.svg' | asset_url }}" loading="lazy" alt="" class="usp-icon">
+          <h1 class="usp-heading">Not satisfied, money-back guarantee</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-section">
+    <div class="customcontainer">
+      <div class="product-wrapper">
+        <div class="section-title">Products</div>
+        <h1 class="heading-3">Our product range</h1>
+        <p class="paragraph center-align">Find the newest TikTok products at Trendt</p>
+        <div class="w-layout-grid product-grid" style="margin-top:24px;">
+          
+         
+                        {% for product in collections.frontpage.products %}
+          
+
+    
+        <div class="single-product">
+            <a href="{{ product.url }}" style="text-decoration: none;">
+            <img src="{{ product.featured_image.src | img_url: 'large' }}" loading="lazy" alt="" class="image-2">
+            <p class="product-name">{{ product.title }}</p>
+              
+              
+              {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: false, product: product %}
+           
+            <p class="review-text" style="margin:8px 0px;">{{ product.price | money }} <span style="color:#929bc1;opacity:0.6;text-decoration: line-through;">{{ product.compare_at_price_max | money }}</span></p>
+            <p class="paragraph">{{ product.metafields.global.productomschrijvingkort }}</p>
+              
+            <a href="{{ product.url }}" class="shop-product-button w-button">Shop Now</a>
+                
+                </a></div>
+    
+
+      
+    
+  {% else %}
+    <p class="paragraph center-align">No search results</p>
+  {% endfor %}
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about-section">
+    <div class="customcontainer">
+      <div class="columns-2 w-row">
+        <div class="about-page-image-column w-col w-col-6 w-col-stack">
+          <h1 class="home-about-us-heading mobile-only">About us</h1><img src="{{'over.jpg' | asset_url}}" loading="lazy" alt="" class="about-image"></div>
+        <div class="about-page-text-column w-col w-col-6 w-col-stack">
+          <h1 class="home-about-us-heading desktop-only">About Us</h1>
+          <p class="paragraph-white">Do you notice these awesome products passing by on TikTok? Do you like these products but have no clue where to get them? We are Trentz, with us you’ll find those products you see on the For You Page. Our product range is continuously updated by the Trendt team, a team of genuine TikTok experts. They identify the newest trends non stop and provide the best prices.</p><a href="/pages/over-ons" class="about-us-button w-button">Read More</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="reviews_section">
+    <div class="customcontainer">
+      <div class="try-block">
+        <div class="section_title_wrapper">
+          <h1 class="about-us-heading">Reviews</h1>
+          <p class="paragraph-white-center">4,7 / 5 Average Rating</p>
+        </div>
+        <div class="columns-4 w-row">
+          <div class="column-17 w-col w-col-6 w-col-stack">
+            <div class="t06_card">
+              <div class="div-block">
+                <p class="t06_paragraph">What an incredible product! This lamp magically transforms my daughter's room into a colourful galaxy! She is extremely happy.</p><a href="#" class="lightbox-link w-inline-block w-lightbox"><img src="{{'BrightSky---Review-Image.png' | asset_url}}" loading="lazy" alt="" class="image-51"><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "type": "image",
+      "_id": "5f8ad0dc97043588bd31911c",
+      "fileName": "BrightSky - Review Image.png",
+      "origFileName": "BrightSky - Review Image.png",
+      "width": 504,
+      "height": 652,
+      "fileSize": 510548,
+      "url": "{{'BrightSky---Review-Image.png' | asset_url}}"
+    }
+  ]
+}</script></a></div>
+              <div class="t06_team_wrap">
+                <div class="t06_author">
+                  <div class="t06_author_wrap">
+                    <div class="t06_name">Tim K.</div>
+                  </div>
+                </div><img src="{{'icon-review-stars-4.5.svg' | asset_url}}" height="" alt="" class="image-52"></div>
+            </div>
+            <div class="t06_card">
+              <div class="div-block">
+                <p class="t06_paragraph">Cool to have these different settings, really relaxing. Would recommend it to anyone trying to brighten up their room! </p><a href="#" class="lightbox-link w-inline-block w-lightbox"><img src="{{'ComfyHood.png' | asset_url}}" loading="lazy" alt="" class="image-51"><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "type": "image",
+      "_id": "5f8ad0dd2ea57d2e9ee3b994",
+      "fileName": "ComfyHood.png",
+      "origFileName": "ComfyHood.png",
+      "width": 524,
+      "height": 904,
+      "fileSize": 572362,
+      "url": "{{'ComfyHood.png' | asset_url}}"
+    }
+  ]
+}</script></a></div>
+              <div class="t06_team_wrap">
+                <div class="t06_author">
+                  <div class="t06_author_wrap">
+                    <div class="t06_name">Yasmine B.</div>
+                  </div>
+                </div><img src="{{'icon-review-stars-4.5.svg' | asset_url}}" height="" alt="" class="image-52"></div>
+            </div>
+          </div>
+          <div class="column-18 w-col w-col-6 w-col-stack">
+            <div class="t06_card">
+              <div class="div-block">
+                <p class="t06_paragraph">This hoodie is so nice, it is actually soft and pretty much the cheapest out there. Really happy with it, THANKS!!<br></p><a href="#" class="lightbox-link w-inline-block w-lightbox"><img src="{{'MoonShine---Review-Image.png' | asset_url }}" loading="lazy" alt="" class="image-51"><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "width": 620,
+      "caption": "",
+      "height": 876,
+      "fileName": "MoonShine - Review Image.png",
+      "origFileName": "MoonShine - Review Image.png",
+      "url": "{{'MoonShine---Review-Image.png' | asset_url}}",
+      "_id": "5f8ad0de025a4cbb5d6e7b78",
+      "type": "image",
+      "fileSize": 752799
+    }
+  ]
+}</script></a></div>
+              <div class="t06_team_wrap">
+                <div class="t06_author">
+                  <div class="t06_author_wrap">
+                    <div class="t06_name">Linde M.</div>
+                  </div>
+                </div><img src="{{'icon-review-stars.svg' | asset_url}}" height="" alt="" class="image-52"></div>
+            </div>
+            <div class="t06_card">
+              <div class="div-block">
+                <p class="t06_paragraph">I bought the Octomood for my girlfriend, now everytime we have an argument she sends me a picture of an angry Octomood. Good to know to give her some space haha!<br></p><a href="#" class="lightbox-link w-inline-block w-lightbox"><img src="{{'review-octomood.jpg' | asset_url}}" loading="lazy" alt="" class="image-51"><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "type": "image",
+      "_id": "5f9578743bcbdccb955a18d0",
+      "fileName": "review-octomood.jpg",
+      "origFileName": "review-octomood.jpg",
+      "width": 500,
+      "height": 790,
+      "fileSize": 375030,
+      "url": "{{'review-octomood.jpg' | asset_url }}"
+    }
+  ]
+}</script></a></div> 
+              <div class="t06_team_wrap">
+                <div class="t06_author">
+                  <div class="t06_author_wrap">
+                    <div class="t06_name">Jasper K.</div>
+                  </div>
+                </div><img src="{{'icon-review-stars.svg' | asset_url }}" height="" alt="" class="image-52"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about-section">
+    <div class="customcontainer">
+      <div class="influencer-columns w-row">
+        <div class="about-page-image-column w-col w-col-6"><img src="{{'samenwerken.jpg' | asset_url}}" loading="lazy" alt="" class="about-image"></div>
+        <div class="about-page-text-column w-col w-col-6">
+          <h1 class="about-us-heading">Are you an influencer?</h1>
+          <p class="paragraph-white-center">Sign up for a collaboration and receive a product of your choice for free! </p><a href="/pages/samenwerken" class="about-us-button w-button">Sign Up</a></div>
+      </div>
+    </div>
+  </div>
+
+{% include 'vip' %}
+{% include 'usps' %}
+{% include 'footer' %}

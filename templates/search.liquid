@@ -1,0 +1,69 @@
+{% style %}
+
+a {
+color:black;
+text-decoration:none;
+}
+
+{% endstyle %}
+
+
+<div class="section-3">
+    <div class="login-card">
+      <h1 class="login-heading">Search</h1>
+      <p class="paragraph center-align">Looking for a specific product? Use our search function.</p>
+      <div class="form-block-2 w-form">
+        
+
+        
+        
+        <form id="email-form" name="email-form" data-name="Email Form" action="/search" method="get" role="search">
+          <label for="name" class="label">🔍 Search</label>
+          <input type="search" class="text-field-2 w-input" maxlength="256" placeholder="What are you looking for?" id="name" name="q" value="{{ search.terms | escape }}">
+          <button type="submit" class="submit-button-2 w-button">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+{% paginate search.results by 10 %}
+  
+
+    <div class="resultaten" style="display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;padding-top: 0px;padding-bottom: 120px;-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;background-color: #ecf7fd;">
+      {% if search.performed %}
+
+      
+      <div class="zoekresultaten customcontainer" style="display:flex;flex-direction:column;">
+{% for item in search.results %}
+
+      <div class="zoekresultaat" style="display:flex;flex-direction:row;text-decoration:none;background-color:white;border-radius:12px;padding:24px;margin-bottom:24px;box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.1);align-items: center;">
+         {% if item.featured_image %}
+        <a href="{{ item.url | within: collection }}" title="{{ item.title | escape }}">
+          {{ item.featured_image.src | img_url: 'small' | img_tag: item.featured_image.alt }}
+        </a>
+      {% endif %}
+        <div class="zoekresultaat-info" style="padding-left:12px;">
+            <h1 class="zoek-heading" style="font-size:24px;text-align:left;text-decoration:none!important;line-height:24px;margin:0px;">
+              {{ item.title | link_to: item.url }}
+          </h1>
+            <p class="paragraph-long" style="text-decoration:none;">{{ item.content | strip_html | truncatewords: 50 }}</p>
+        </div>
+      </div>
+    {% else %}
+      no results
+    {% endfor %}
+        
+      </div>
+  {% endif %}
+
+  {% if paginate.pages > 1 %}{{ paginate | default_pagination }}{% endif %}
+
+
+    </div>
+
+  {% endpaginate %}
+
+
+{% include 'footer' %}

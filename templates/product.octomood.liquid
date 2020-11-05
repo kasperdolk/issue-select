@@ -1,0 +1,124 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+{% assign stocknumber = 3 %}
+{% assign productomschrijving_kort = "Express your feelings with the Octomood🥺" %}
+
+
+<div class="section-4" id="product-page-section">
+    <div class="customcontainer-2">
+      <div class="columnsproduct w-row">
+        <div class="imgcolumn w-col w-col-6 w-col-stack">
+          <div class="imagewrapper">
+            {% include 'image-slider.liquid' %}
+          </div>
+        </div>
+        <div class="column-2 w-col w-col-6 w-col-stack">
+          {% include 'product-info' %}
+              
+          <div class="w-layout-grid usps_grid">
+            <div id="w-node-1510455e3a38-5c1a5c2a" class="single_usp"><img src="{{'icon-gratis-verzonden-usp.svg' | asset_url}}" alt="" class="usp_image">
+              <p class="website_usp">Gratis verzending</p>
+            </div>
+            <div class="single_usp"><img src="{{'icon-tevredenheidsgarantie-usp.svg' | asset_url}}" alt="" class="usp_image">
+              <p class="website_usp">Tevredenheidsgarantie</p>
+            </div>
+            <div class="single_usp"><img src="{{'icon-veilig-betalen-usp.svg' | asset_url}}" alt="" class="usp_image">
+              <p class="website_usp">Veilig betalen</p>
+            </div>
+          </div>
+          <div class="productpagesubtitle">WHAT IS THE OCTOMOOD?</div>
+          <p item="description" class="paragraph-2">{{ product.description }}</p>
+                    <img src="{{' ezgif.com-gif-maker_11.gif ' | asset_url}}" alt="" class="image_product_description">
+          
+   
+          
+          <div class="productpagesubtitle">WHY THE OCTOMOOD?</div>
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Show your friends and family in what mood you are <b>without saying a word</b></p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Get the <b>emotional support</b> you deserve</p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2"><b>Perfect</b> as a small cuddly toy</p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Super soft and <b>extra plush</b></p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">The <b>best</b> gift for your friends</p>
+          </div>
+          
+          <img src="{{'  octomoodgif1.gif ' | asset_url}}" alt="" class="image_product_description">
+          
+          
+          <div class="productpagesubtitle">WAT JE KRIJGT:</div>
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Octomood Octopus Plush</p>
+          </div>
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Emotional support</p>
+          </div>
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Wat wil je nog meer?</p>
+          </div>
+    
+          
+          {% include 'mededeling' %}
+          
+          <div class="productpagesubtitle">100% SATISFACTION GUARANTEE</div>
+          <p class="paragraph-2">Dissatisfied for whatever reason? Return your purchase within the first 14 days to address our policy. </p>
+          <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">
+              <div class="question-title">How big is the Octomood?</div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">The octomood is 10 cm in length and 20cm in width🐙</p>
+            </div>
+          </div>
+          
+          <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">
+              <div class="question-title">My girlfriend didn’t think it was a nice present, what should i do?</div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">Turn the Octomood around to the happy side, wait half an hour and your problem will be surely solved. 🙃</p>
+            </div>
+          </div>
+          
+           <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">
+              <div class="question-title">From which material is the Octomood made?</div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">The Octomood is made from extra soft cotton and fleece fabric.🧶</p>
+            </div>
+          </div>
+          
+             <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">
+              <div class="question-title">How can I use the checkout?</div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">Payments with Apple pay, Google pay, Paypal, and Credit Card are possible.</p>
+            </div>
+          </div>  
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Add recommendation widget -->
+<div id="ur-custom-widget"></div>
+<!-- End recommendation widget -->
+
+{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
+
+{% include 'usps' %}
+{% include 'footer' %}
+{% include 'sticky-buy' %}

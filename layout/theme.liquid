@@ -1,0 +1,96 @@
+<!doctype html>
+<html data-wf-site="5f8aa4e85eb38661dc19d921">
+<head>
+  
+  <script>
+  (function() {
+    var ta = document.createElement('script'); ta.type = 'text/javascript'; ta.async = true;
+    ta.src = 'https://analytics.tiktok.com/i18n/pixel/sdk.js?sdkid=BUE1EB5T9GOLORFECJD0';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ta, s);
+  })();
+</script>
+  
+  
+  <script>
+  (function() {
+    var ta = document.createElement('script'); ta.type = 'text/javascript'; ta.async = true;
+    ta.src = 'https://analytics.tiktok.com/i18n/pixel/sdk.js?sdkid=BUBVBGRS9K3PO73JDLJ0';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ta, s);
+  })();
+</script>
+  
+  <title>{{ page_title }}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="{{ page_description | escape }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  
+      <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5f8aa4e85eb38661dc19d921" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  {{ content_for_header }} <!-- Header hook for plugins -->
+  {{ 'application.scss.css' | asset_url | stylesheet_tag }}
+    {{ 'normalize.css' | asset_url | stylesheet_tag }}
+    {{ 'webflow.css' | asset_url | stylesheet_tag }}
+    {{ 'trentz.webflow.css' | asset_url | stylesheet_tag }}
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
+
+  
+
+
+{% render 'weglot_hreftags' %}
+{% render 'weglot_switcher' %}
+
+	{{ shop.metafields.loox["global_html_head"] }}
+{% include 'booster-common' %}
+  
+  
+
+  
+  
+<script>
+  
+  {% if request.page_type == 'product' %}
+      const html = document.querySelector('html');
+    	html.setAttribute('data-wf-page', '5f9129a1428075f95c1a5c2a');
+  {% else %}
+  
+        const html = document.querySelector('html');
+    	html.setAttribute('data-wf-page', '5f8aa4e85eb3860b2d19d922');
+
+{% endif %}
+  
+  </script>
+  
+  
+  {% include 'judgeme_core' %}
+</head>
+<body>
+  
+
+  
+    
+    {% include 'navbar' %}
+
+
+
+  <main role="main">
+    
+        {% if request.path == '/challenge' %}
+    {% include 'challenge' %}
+  {% else %}
+    {{ content_for_layout }}
+  {% endif %}
+    
+  </main>
+    
+  
+    {{ 'application.js' | asset_url | script_tag }}
+  {{ 'webflow.js' | asset_url | script_tag }}
+
+	{{ shop.metafields.loox["global_html_body"] }}
+{% include 'booster-discounts' %}
+{% include 'booster-message' %}
+</body>
+</html>

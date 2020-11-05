@@ -1,0 +1,15 @@
+<div class="product-info-wrapper" id="buy-section">
+    <h1 item="title" class="productpagename">{{ product.title }}</h1>
+    <div class="reviewtextamount" id="product-description-paragraph" style="margin-left:0px;color:gray; ">{{ productomschrijving_kort }}</div>
+    <div class="starwrapperleft">{% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: false, product: product %}</div>
+
+
+    <div class="pricingwrapper">
+        <span class="js-price price_text" data-default-price="{{ product.price | money }}">{{ product.price | money }}</span>
+        <div item="compare-price" class="comparedatpricetext js-discounted-price" data-default-price="{{ product.compare_at_price | money }}">{{ product.compare_at_price | money }}</div>
+    </div>
+
+    {% include 'stock-quantity' %}
+    {% include 'add-to-cart' %}
+
+</div>

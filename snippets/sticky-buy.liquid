@@ -1,0 +1,15 @@
+  <div class="stickybuy">
+    <div class="stickybuyleft">
+      <div item="title" class="stickybuytitle">{{ product.title }}</div>
+      <p item="price" class="paragraph-3">
+        <span class="js-price" style="color:#ee1d52;font-weight:bold;" data-default-price="{{ product.price | money }}">{{ product.price_min | money }}</span> 
+        <span style="color:#929bc1;opacity:0.6;text-decoration: line-through;" class="js-discounted-price">{{ product.compare_at_price_min | money }}</span></p>
+    </div>
+    
+
+    <div class="stickybuyright">
+
+                    <a type="submit" href="#buy-section" class="checkoutbuttonstickybar w-button">Add to cart +</a>
+
+</div>
+  </div>

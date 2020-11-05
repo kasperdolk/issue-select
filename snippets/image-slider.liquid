@@ -1,0 +1,53 @@
+
+            <div data-animation="slide" data-duration="500" data-infinite="1" item="product-images" dimension="master" class="slider-3 w-slider">
+                                                        <span class="sale-badge">Save {{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | money_without_currency | replace: '0.', ''| append: "%"}} </span>
+              <div class="mask-2 w-slider-mask">
+                          {% for image in product.images %}
+                            <div class="slide-3 w-slide" style="background-image:url({{ image.src | img_url: '1024x1024' }});">
+                          </div>
+                          {% endfor %}
+                          
+
+                
+              </div>
+              <div class="w-slider-arrow-left">
+                <div class="icon-14 w-icon-slider-left"></div>
+              </div>
+              <div class="w-slider-arrow-right">
+                <div class="icon-14 w-icon-slider-right"></div>
+              </div>
+              <div class="slide-nav-5 w-slider-nav w-slider-nav-invert w-round"></div>
+            </div>
+                                        <div class="container-list">
+              <div class="div-block-179">
+                {% for image in product.images %}
+                <div alt="" class="image-38" style="background-image:url({{ image.src | img_url: '1024x1024' }});"></div>
+                {% endfor %}
+                </div>
+            </div>
+
+
+<script>
+  let currentImage = 1;
+const imgs = document.querySelectorAll('.image-38');
+
+function displayImage(i) {
+    while (currentImage != i) {
+        currentImage++;
+        document.querySelector('.w-slider-arrow-right').click()
+        if (currentImage > imgs.length) currentImage = 1;
+        if (currentImage < 1) currentImage = imgs.length;
+    }
+}
+
+for (let i = 1; i <= imgs.length; i++) {
+    imgs[i - 1].addEventListener('click', () => {
+        displayImage(i);
+    });
+}
+
+setInterval(() => {
+    const el = document.querySelector('.w-slider-aria-label');
+    currentImage = Number(el.innerText.split(' ')[1]) || 1;
+}, 250);
+</script>

@@ -1,0 +1,38 @@
+  <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
+      <div class="usp-bar">
+          <div class="usp-bar-text">Free Standard Shipping</div>
+          <img src="{{'Shippinglogo.png' | asset_url }}" loading="lazy" sizes="32px" alt="" class="image">
+      </div>
+      <div class="customcontainer navbar-container w-container">
+          <a href="/" class="brand w-nav-brand"><img src="{{'logo-trendt.png' | asset_url }}" loading="lazy" height="48" alt="" class="logo-nav"></a>
+          <nav role="navigation" class="nav-menu w-nav-menu"> 
+
+              {% for link in linklists.main-menu.links %}
+              <a href="{{ link.url }}" class="nav-link w-nav-link">{{ link.title }}</a>
+              {% endfor %}
+
+
+
+
+              <a href="/search" class="search-icon hide-mobile w-inline-block">
+                  <img src="{{'icon-zoeken.svg' | asset_url }}" loading="lazy" alt="" class="image-icon"></a>
+              <a href="/cart" class="cart-icon hide-mobile w-inline-block"><img src="{{ 'icon-winkelmandje.svg' | asset_url }}" loading="lazy" alt="" class="image-icon">
+                               {% if cart.item_count >= 1 %}
+              <div class="text-block">{{ cart.item_count }}</div>
+              {% endif %}
+              </a>
+          </nav>
+          <div class="menu-button w-nav-button">
+              <div class="icon-15 w-icon-nav-menu"></div>
+          </div>
+          <a href="/" class="menu-logo w-inline-block">
+              <img src="{{'LOGO.png' | asset_url }}" loading="lazy" height="48" alt="" class="logo-nav"></a>
+          <a href="/search" class="search-icon hide-desktop w-inline-block"><img src="{{'icon-zoeken.svg' | asset_url}}" loading="lazy" alt="" class="image-icon"></a>
+          <a href="/cart" class="cart-icon hide-desktop w-inline-block"><img src="{{'icon-winkelmandje.svg' | asset_url}}" loading="lazy" alt="" class="image-icon">
+              {% if cart.item_count >= 1 %}
+              <div class="text-block">{{ cart.item_count }}</div>
+              {% endif %}
+
+          </a>
+      </div>
+  </div>

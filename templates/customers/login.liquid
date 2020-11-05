@@ -1,0 +1,60 @@
+<!-- /templates/customers/login.liquid -->
+
+<body class="body-colored">
+
+  <div class="section-3">
+    <div class="login-card">
+      <h1 class="login-heading">Inloggen</h1>
+      <p class="paragraph center-align">Login met je account bij Trentz</p>
+      <div class="form-block-2 w-form">
+<div data-login-form>
+  {% form 'customer_login' %}
+
+    {{ form.errors | default_errors }}
+
+    <label for="CustomerEmail" class="label">
+      📧 Jouw E-mailadres
+    </label>
+    <input type="email"
+           name="customer[email]"
+           id="CustomerEmail"
+           class="text-field-2 w-input {% if form.errors contains 'email' %}input-error{% endif %}"
+           placeholder="Jouw e-mailadrres"
+           spellcheck="false"
+           autocomplete="off"
+           autocapitalize="off"
+           autofocus>
+
+    {% if form.password_needed %}
+      <label for="CustomerPassword" class="label">
+        🔐 Jouw wachtwoord
+      </label>
+      <input type="password"
+             name="customer[password]"
+             id="CustomerPassword"
+             class="text-field-2 w-input {% if form.errors contains 'password' %}input-error{% endif %}"
+             placeholder="Jouw wachtwoord">
+    {% endif %}
+
+    <input type="submit" class="submit-button-2 w-button" value="Inloggen">
+
+
+    <a href="/account/register">
+      of account aanmaken
+    </a>
+  
+      <a href="/account/reset">
+      Wachtwoord vergeten?
+    </a>
+  {% endform %}
+
+</div>
+
+
+      </div>
+    </div>
+  </div>
+{% include 'footer' %}
+</body>
+
+

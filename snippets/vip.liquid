@@ -1,0 +1,34 @@
+<div class="vip-section">
+    <div class="customcontainer">
+      <div class="wrapper-vip-lijst">
+        <h1 class="heading-3">VIP LIST</h1>
+        <p class="paragraph center-align">Stay up-to-date for the newest trends, discounts & giveaway’s!</p>
+        <div class="form-block w-form">
+          
+            {% form 'customer' %}
+    {{ form.errors | default_errors }}
+    {% if form.posted_successfully? %}
+      <p class="paragraph center-align">You are now added to our VIP lijst!</p>
+    {% else %}
+          <div id="email-form" name="email-form" data-name="Email Form" class="form">
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <input type="email"
+             class="text-field w-input"
+        name="contact[email]"
+        id="Email"
+        value="{% if customer.email != blank %}{{ customer.email }}{% endif %}"
+        placeholder="Your Emailadress"
+        autocorrect="off"
+        autocapitalize="off">
+      <button type="submit" name="commit" id="Subscribe" class="submit-button w-button">
+        <span>Subscribe</span>
+      </button>
+          </div>
+    {% endif %}
+  {% endform %}
+          
+ 
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="16px" viewBox="0 0 24 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrow</title>
+    <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.4">
+        <g id="ic-keyboard-arrow-down-48px" fill="#000000" fill-rule="nonzero">
+            <polygon id="Path" points="2.83 0.42 12 9.59 21.17 0.42 24 3.25 12 15.25 0 3.25"></polygon>
+        </g>
+    </g>
+</svg>

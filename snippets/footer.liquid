@@ -1,0 +1,47 @@
+<div class="footer-section">
+    <div class="customcontainer">
+        <div class="columns-5 w-row">
+            <div class="column-19 w-col w-col-3 w-col-stack"><a href="/" aria-current="page" class="w-inline-block w--current"><img src="{{'logo-trendt.png' | asset_url}}" loading="lazy" alt="" class="footer-logo"></a>
+                <p class="footer-paragraph">Lange Leidsedwarsstraat 74<br>Amsterdam 1017 NM the Netherlands<br>Kvk: 76906914</p><a href="mailto:hey@trendt.uk" class="email-link">hey@trendt.uk</a><a href="" target="_blank" class="icon-link w-inline-block"><img src="{{'icon-tiktok.svg' | asset_url}}" loading="lazy" alt=""></a><a href="" target="_blank" class="icon-link w-inline-block"><img src="{{'icon-instagram.svg' | asset_url}}" loading="lazy" alt=""></a>
+            </div>
+            <div class="footer-column-menu-items w-col w-col-3 w-col-stack">
+                <h1 class="footer-sub-heading">Menu</h1>
+                
+                                {% for link in linklists.footer-menu-1.links %}
+  <a href="{{ link.url }}" class="link">{{ link.title }}</a>
+{% endfor %}
+
+            </div>
+            <div class="column-19 w-col w-col-3 w-col-stack">
+                
+                <h1 class="footer-sub-heading">Info</h1>
+                
+                {% for link in linklists.footer-menu-2.links %}
+  <a href="{{ link.url }}" class="link">{{ link.title }}</a>
+{% endfor %}
+
+            </div>
+            <div class="column-19 w-col w-col-3 w-col-stack">
+                <h1 class="footer-sub-heading">My Account</h1>
+                
+                                {% for link in linklists.footer-menu-3.links %}
+  <a href="{{ link.url }}" class="link">{{ link.title }}</a>
+{% endfor %}
+                
+                <a href="/cart" class="link">Cart</a>
+            </div>
+        </div>
+        <div class="columns-6 w-row">
+            <div class="column-21 w-col w-col-4 w-col-stack">
+                <p class="copyright-paragraph">Copyright © 2020, Trendt. All rights reserved. Designed by Trendt.</p>
+            </div>
+            <div class="column-20 w-col w-col-8 w-col-stack">
+                <p class="payment-methods-text">We accept</p>
+                <div class="">
+                  <img src="{{'betaalmethodes-trentz-mobile.png' | asset_url}}" loading="lazy" alt="" class="payment-method-icon hide-desktop">
+                  <img src="{{'betaalmethodes-trentz-desktop.png' | asset_url}}" loading="lazy" alt="" class="payment-method-icon hide-mobile">
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+<body class="body-colored">
+
+  <div class="about-page-section">
+    <div class="customcontainer">
+      <div class="columns-2 w-row">
+        <div class="about-page-image-column w-col w-col-6 w-col-stack"><img src="{{'contact.jpg' | asset_url}}" loading="lazy" width="901" alt="" class="about-image"></div>
+        <div class="about-page-text-column w-col w-col-6 w-col-stack">
+          <h1 class="about-us-heading">{{ page.title }}</h1>
+          <p class="paragraph-white">{{ page.content }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-form-section">
+    <div class="formcontainer">
+      <h1 class="about-us-heading">Contact Form</h1>
+      <p class="paragraph-white-copy">Please fill out the following form.</p>
+      <div class="form-block-2 w-form">
+        
+
+
+
+
+
+        {% form 'contact' %}
+
+        
+        
+        
+{% comment %}
+          Successful message
+{% endcomment %}
+{% if form.posted_successfully? %}
+          <p class="paragraph-white-copy">
+Thank you for your message, we will contact you as soon as possible.
+          </p>
+{% endif %}
+{{ form.errors | default_errors }}
+      
+        
+        <form id="email-form" name="email-form" data-name="Email Form" class="form-2">
+          
+          {% assign name_attr = 'contact.form.name' | t | handle %}
+          
+          <div class="single-field-wrapper">
+            <label for="ContactFormName" class="field-label">😄 Full name</label>
+            <input type="text" class="text-field-3 w-input" maxlength="256" name="contact[{{ name_attr }}]" placeholder="Type here..." autocapitalize="words" value="{% if form[name_attr] %}{{ form[name_attr] }}{% elsif customer %}{{ customer.name }}{% endif %}" id="ContactFormName"/>
+          </div>
+          <div class="single-field-wrapper">
+            <label for="ContactFormEmail" class="field-label">📧 E-mail address</label>
+            <input type="text" class="text-field-3 w-input" maxlength="256" id="ContactFormPhone" name="contact[email]" placeholder="Type here..." autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}" />
+          </div>
+          <div class="single-field-wrapper">
+            <label for="ContactFormMessage" class="field-label">💬 Message</label>
+            <textarea placeholder="Type here..." maxlength="5000" id="ContactFormMessage" class="textarea w-input" name="contact[body]" placeholder="Type your message here" {% if form.body %}{{ form.body }}{% endif %}></textarea>
+          </div>
+          
+          <input type="submit" value="Send" data-wait="A moment..." class="contact-form-button w-button" >
+        </form>
+        
+        {% endform %}
+ 
+      </div>
+    </div>
+  </div>
+
+  {% include 'usps' %}
+  {% include 'footer' %}
+</body>

@@ -1,0 +1,149 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+{% assign productomschrijving_kort = "24/7 a warm hug 🥺" %}
+{% assign stocknumber = 20 %}
+
+
+
+
+<div class="section-4" id="product-page-section">
+    <div class="customcontainer-2">
+      <div class="columnsproduct w-row">
+        <div class="imgcolumn w-col w-col-6 w-col-stack">
+          <div class="imagewrapper">
+            {% include 'image-slider' %}
+          </div>
+        </div>
+        <div class="column-2 w-col w-col-6 w-col-stack">
+                        
+          {% include 'product-info' %}
+          
+
+              
+          <div class="w-layout-grid usps_grid">
+            <div id="w-node-1510455e3a38-5c1a5c2a" class="single_usp"><img src="{{'icon-gratis-verzonden-usp.svg' | asset_url}}" alt="" class="usp_image">
+              <p class="website_usp">Free shipping</p>
+            </div>
+            <div class="single_usp"><img src="{{'icon-tevredenheidsgarantie-usp.svg' | asset_url}}" alt="" class="usp_image">
+              <p class="website_usp">100% Buyers satisfaction </p>
+            </div>
+            <div class="single_usp"><img src="{{'icon-veilig-betalen-usp.svg' | asset_url}}" alt="" class="usp_image">
+              <p class="website_usp">Encrypted payments</p>
+            </div>
+          </div>
+          
+          <div class="productpagesubtitle">WHAT IS THE COMFYHOOD?</div>
+         
+          <p item="description" class="paragraph-2">{{ product.description }}</p>
+          
+          <img src="{{'ezgif.com-gif-maker_5.gif' | asset_url}}" alt="" class="image_product_description">
+          
+          <div class="productpagesubtitle">WHY THE COMFYHOOD?:</div>
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">The ComfyHood basically is a warm hug all the time you wear it. And who doesn’t want that?</p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">You’ll never be cold anymore because of the <b>soft inner lining</b></p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Disappear under the extra large hood for <b>extra comfort</b></p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">It is basically <b>the perfecte winter hoodie</b></p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Hide your favourite snacks in the <b>large pockets</b></p>
+          </div>
+          
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2"><b>Never be cold</b> anymore while binge watching Netflix </p>
+          </div>
+          
+          <div class="advantageslistitem"><img src="{{'icon-check-mark-trentz.svg' | asset_url}}" alt="" class="listcheckmark">
+            <p class="paragraph-2">Perfect <b>Christmas gift.</b> </p>
+          </div>
+          
+         
+{% include 'mededeling' %}
+          
+          
+          <div class="productpagesubtitle">100% SATISFACTION GUARANTEE</div>
+          <p class="paragraph-2">Dissatisfied for whatever reason? Return your purchase within the first 14 days to address our policy.</p>
+  
+            <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">
+              <div class="question-title">What is the difference between the standard and deluxe?</div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">Let's put it this way, the standard Comfyhood is nice, but the deluxe is without a doubt, <b>Really nice.</b> Extra lining, extra soft, extra large. if i were you i would pick the deluxe. 😉 </p>
+            </div>
+          </div>
+  
+            <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">          
+              <div class="question-title">Why is there only one size?</div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">We like to keep things simple at Trentz, in this way you’ll never order the wrong size by accident! We made the Comfyhood in this way so everybody will be able to wear it. Accept for Sultan Kösen (give it a search) 😉</p>
+            </div>
+          </div>
+  
+          <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">          
+              <div class="question-title">Can the Comfyhood be put in the washing machine?</div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">Sure! let it go for a spin! 🔄</p>
+            </div>
+          </div>
+  
+  
+          <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">
+              <div class="question-title">What kind of fabric is it?</div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">The Comfyhood is made from Cotton and Microfibers (fleece material) 🧶 </p>
+            </div>
+          </div>
+  
+  
+          <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">
+              <div class="question-title">What if I'm still cold while wearing my Comfyhood? </div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">Impossible. The Comfyhood is the most warm hoodie ever to have existed. Are you still cold? We’ll send you an extra one, layers on layers 🥵</p>
+            </div>
+          </div>
+  
+             <div class="faq-question-wrap">
+            <a href="#" class="faq-question-bar w-inline-block">
+              <div class="question-title">How can I use the checkout?</div><img src="{{'arrow.svg' | asset_url}}" loading="lazy" alt="" class="image-56"></a>
+            <div class="faq-content">
+              <p class="faq-answer">Payments with Apple pay, Google pay, Paypal, and Credit Card are possible.</p>
+            </div>
+          </div>          
+          
+ 
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Add recommendation widget -->
+<div id="ur-custom-widget"></div>
+<!-- End recommendation widget -->
+
+{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
+
+
+
+{% include 'usps' %}
+{% include 'footer' %}
+{% include 'sticky-buy' %}
+
